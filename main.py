@@ -2,9 +2,12 @@ from googleCalendar import GoogleCalendar
 
 def main():
     gc = GoogleCalendar()
+    
+    # イベントを取得
     events = gc.read()
     print(f"🚀 events: {events}")
     
+    # イベントを登録
     gc.regist(
         summary="新しいイベント",
         location="東京",
