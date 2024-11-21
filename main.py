@@ -12,8 +12,8 @@ def main():
         summary="新しいイベント",
         location="東京",
         description="これはテストイベントです。",
-        start_time="2024-08-16T12:00:00",
-        end_time="2024-08-16T18:00:00"
+        start_time="2024-10-15T12:00:00",
+        end_time="2024-10-15T18:00:00"
     )
 
 # main関数を実行する

@@ -29,13 +29,24 @@ class GoogleCalendar:
                 token.write(self.creds.to_json())
         self.service = build("calendar", "v3", credentials=self.creds)
 
-    def read(self):
+    # 
+    def read(self, timeMin: str = datetime.datetime.utcnow().isoformat() + "Z", timeMax: str = None):
+        """Googleカレンダーからイベントを取得する
+
+        Args:
+            timeMin (str): イベントの取得開始日時 デフォルトは現在日時(datetime.datetime.utcnow().isoformat() + "Z")
+            timeMax (str): イベントの取得終了日時
+
+        Returns:
+            list: 取得したイベントのリスト
+        """
         now = datetime.datetime.utcnow().isoformat() + "Z"
         events_result = (
             self.service.events()
             .list(
                 calendarId="primary",
-                timeMin=now,
+                timeMin=timeMin,
+                timeMax=timeMax,
                 maxResults=10,
                 singleEvents=True,
                 orderBy="startTime",

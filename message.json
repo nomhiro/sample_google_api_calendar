@@ -1,0 +1,50 @@
+[
+  {"role": "user", "content": "What"s the weather and current time in San Francisco, Tokyo, and Paris?"
+  }, ChatCompletionMessage(content=None, refusal=None, role="assistant", function_call=None, tool_calls=[ChatCompletionMessageToolCall(id="call_Xie0xip8Wqj85l8lD8IPDvRq", function=Function(arguments="{
+      "location": "San Francisco"
+    }", name="get_current_weather"), type="function"), ChatCompletionMessageToolCall(id="call_vlimrQlm1WtJf7l83SxKkHmd", function=Function(arguments="{
+      "location": "San Francisco"
+    }", name="get_current_time"), type="function"), ChatCompletionMessageToolCall(id="call_68FigiyD571BZpGBjKs1flwF", function=Function(arguments="{
+      "location": "Tokyo"
+    }", name="get_current_weather"), type="function"), ChatCompletionMessageToolCall(id="call_QT7gCb95hLmMxxkNx1aEqnjT", function=Function(arguments="{
+      "location": "Tokyo"
+    }", name="get_current_time"), type="function"), ChatCompletionMessageToolCall(id="call_gHXzISCnO4OqIfe7hi9Xv4LH", function=Function(arguments="{
+      "location": "Paris"
+    }", name="get_current_weather"), type="function"), ChatCompletionMessageToolCall(id="call_mFPlRUToU5ibEVInK1ceyDov", function=Function(arguments="{
+      "location": "Paris"
+    }", name="get_current_time"), type="function")
+  ]),
+  {"tool_call_id": "call_Xie0xip8Wqj85l8lD8IPDvRq", "role": "tool", "name": "get_current_weather", "content": "{
+      "location": "San Francisco",
+      "temperature": "72",
+      "unit": "fahrenheit"
+    }"
+  },
+  {"tool_call_id": "call_vlimrQlm1WtJf7l83SxKkHmd", "role": "tool", "name": "get_current_time", "content": "{
+      "location": "San Francisco",
+      "current_time": "01:59 AM"
+    }"
+  },
+  {"tool_call_id": "call_68FigiyD571BZpGBjKs1flwF", "role": "tool", "name": "get_current_weather", "content": "{
+      "location": "Tokyo",
+      "temperature": "10",
+      "unit": "celsius"
+    }"
+  },
+  {"tool_call_id": "call_QT7gCb95hLmMxxkNx1aEqnjT", "role": "tool", "name": "get_current_time", "content": "{
+      "location": "Tokyo",
+      "current_time": "05:59 PM"
+    }"
+  },
+  {"tool_call_id": "call_gHXzISCnO4OqIfe7hi9Xv4LH", "role": "tool", "name": "get_current_weather", "content": "{
+      "location": "Paris",
+      "temperature": "22",
+      "unit": "celsius"
+    }"
+  },
+  {"tool_call_id": "call_mFPlRUToU5ibEVInK1ceyDov", "role": "tool", "name": "get_current_time", "content": "{
+      "location": "Paris",
+      "current_time": "10:59 AM"
+    }"
+  }
+]
